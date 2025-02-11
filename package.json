@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write 'src/**/*' 'types/**/*' 'scripts/**/*'",
+    "type-check": "tsc --noEmit",
+    "gen": "bun scripts/gen-entries.ts",
+    "start:server": "python3 -m http.server $PORT -d ./src"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/wicg-file-system-access": "^2023.10.7",
+    "csstype": "^3.2.3",
+    "prettier": "^3.9.5",
+    "prettier-plugin-jsdoc": "^1.8.1",
+    "typed-query-selector": "^2.12.0"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-jsdoc"
+    ],
+    "jsdocTagsOrder": "{\"template\": 24.5}",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  }
+}
